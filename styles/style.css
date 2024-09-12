@@ -15,11 +15,6 @@
     box-sizing: border-box;
 }
 
-/*---HEADER---*/
-.header{
-    position: fixed;
-}
-
 /*---BODY---*/
 body{
     background-color: var(--background-color-main);
@@ -27,6 +22,21 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+/*---HEADER---*/
+.header{
+    position: fixed;
+    height: 17.5%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo{
+    height: 80%;
+    width: auto;
 }
 
 /*---CONTAINER---*/
@@ -40,7 +50,7 @@ body{
 }
 
 .container__main{
-    height: 70%;
+    height: 65%;
     width: 100%;
     background-color: var(--background-color-secondary);
 }
