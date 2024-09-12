@@ -1,0 +1,46 @@
+/*---IMPORT---*/
+
+
+/*---ROOT---*/
+:root{
+    --background-color-main:#138AC4;
+    --background-color-secondary:#171837;
+}
+
+/*---RESET CSS---*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/*---HEADER---*/
+.header{
+    position: fixed;
+}
+
+/*---BODY---*/
+body{
+    background-color: var(--background-color-main);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*---CONTAINER---*/
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__main{
+    height: 70%;
+    width: 100%;
+    background-color: var(--background-color-secondary);
+}
