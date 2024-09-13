@@ -6,14 +6,55 @@
     <title>José Pardo - Login</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="src\image-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <img class="header__logo" src="/src/logo-jose-pardo (1).png" alt="Logo del Instituto Jose Pardo">
     </header>
-    <div class="container">
-        <div class="container__main">
-            
+    <div class="container__main">
+        <div class="container__secondary">
+            <div class="container">
+                <div class="left-content">
+                    <h1>Sistema de Gestión para las EFSRT</h1>
+                    <p>Plataforma que permite gestionar eficientemente la documentación de prácticas, mejorando la organización
+                        y seguimiento de las actividades formativas. Automatizando el proceso de certificación, garantizando una
+                        experiencia más ágil y precisa.</p>
+                </div>
+                <div class="login-box">
+                    <form action="login.php" method="post">
+                        <select name="rol" required>
+                            <option value="SOLICITANTE">SOLICITANTE</option>
+                            <option value="DOCENTE">DOCENTE</option>
+                            <option value="COORDINADOR">COORDINADOR</option>
+                            <option value="DIRECTIVO">DIRECTIVO</option>
+                            <option value="SOPORTE">SOPORTE</option>
+                        </select>
+                        <input type="text" name="usuario" placeholder="Usuario" required>
+                        <div class="password-container">
+                            <input type="password" id="password" placeholder="Clave">
+                            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                        </div>
+                        <div class="button-group">
+                            <button class="ingresar-btn" type="submit">Ingresar</button>
+                            <button class="salir-btn" type="button" onclick="window.location.href='index.html'">Salir</button>
+                        </div>
+                        <div class="links">
+                            <a href="#">¿Olvidaste tu Clave?</a>
+                            <a href="#">Regístrate</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>
+                document.getElementById('togglePassword').addEventListener('click', function () {
+                    const passwordInput = document.getElementById('password');
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    this.classList.toggle('fa-eye');
+                    this.classList.toggle('fa-eye-slash');
+                });
+            </script>
         </div>
     </div>
 </body>
